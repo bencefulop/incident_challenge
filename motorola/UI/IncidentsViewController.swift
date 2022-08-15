@@ -6,16 +6,14 @@ import UIKit
 
 class IncidentsViewController: UIViewController {
 
-    
-
     var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        DataManager()
     }
-    
-    
+
     private func configureTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         view.addSubview(tableView)
