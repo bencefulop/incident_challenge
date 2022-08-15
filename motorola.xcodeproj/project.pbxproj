@@ -11,6 +11,7 @@
 		DD07E4A328AA382F00866A68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07E4A228AA382F00866A68 /* SceneDelegate.swift */; };
 		DD07E4AA28AA383100866A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD07E4A928AA383100866A68 /* Assets.xcassets */; };
 		DD07E4B528AA3B8900866A68 /* IncidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */; };
+		DDDB964028AA44AE0010446B /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = DDDB963F28AA44AE0010446B /* TestData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		DD07E4A928AA383100866A68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD07E4AE28AA383100866A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentsViewController.swift; sourceTree = "<group>"; };
+		DDDB963F28AA44AE0010446B /* TestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +56,28 @@
 			children = (
 				DD07E4A028AA382F00866A68 /* AppDelegate.swift */,
 				DD07E4A228AA382F00866A68 /* SceneDelegate.swift */,
-				DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */,
-				DD07E4A928AA383100866A68 /* Assets.xcassets */,
-				DD07E4AE28AA383100866A68 /* Info.plist */,
+				DDDB964128AA49F30010446B /* UI */,
+				DDDB964228AA49FD0010446B /* SupportingFiles */,
 			);
 			path = motorola;
+			sourceTree = "<group>";
+		};
+		DDDB964128AA49F30010446B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DDDB964228AA49FD0010446B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DD07E4A928AA383100866A68 /* Assets.xcassets */,
+				DD07E4AE28AA383100866A68 /* Info.plist */,
+				DDDB963F28AA44AE0010446B /* TestData.json */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD07E4AA28AA383100866A68 /* Assets.xcassets in Resources */,
+				DDDB964028AA44AE0010446B /* TestData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
