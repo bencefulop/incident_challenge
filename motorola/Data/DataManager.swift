@@ -18,30 +18,29 @@ class DataManager {
             if let data = try? Data(contentsOf: url) {
                 let jsondecoder = JSONDecoder()
                 do {
-                    let stubIncidents = try jsondecoder.decode(Incident.self, from: data)
-//                    for incident in stubIncidents {
-//                        let newIncident = Incident(
-//                        Incident(
-//                            title: incident.title
-//                            callTime: String
-//                            lastUpdated: String
-//                            id: String
-//                            latitude: Int
-//                            longitude: Int
-//                            description: String
-//                            location: String
-//                            status: String
-//                            type: String
-//                            typeIcon: String
-//                        )
-//                        self.incidents.append(newIncident)
+                    let stubIncidents = try jsondecoder.decode([Incident].self, from: data)
+                    for incident in stubIncidents {
+                        let newIncident = Incident(
+                            title: incident.title,
+                            callTime: incident.callTime,
+                            lastUpdated: incident.lastUpdated,
+                            id: incident.id,
+                            latitude: incident.latitude,
+                            longitude: incident.longitude,
+                            description: incident.description,
+                            location: incident.location,
+                            status: incident.status,
+                            type: incident.type,
+                            typeIcon: incident.typeIcon
+                        )
+                        self.incidents.append(newIncident)
                     }
+                }
                 catch {
                     print("error trying parse json: \(error)")
-                }
                 }
             }
         }
     }
-
-
+}
+    

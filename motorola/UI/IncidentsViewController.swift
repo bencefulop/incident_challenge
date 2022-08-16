@@ -11,7 +11,8 @@ class IncidentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        DataManager()
+        let values = DataManager().incidents
+        print("🎉 \(values)")
     }
 
     private func configureTableView() {

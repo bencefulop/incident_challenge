@@ -13,12 +13,12 @@ struct Incident: Codable, Identifiable {
     let callTime: String
     let lastUpdated: String
     let id: String
-    let latitude: Int
-    let longitude: Int
-    let description: String
+    let latitude: Double
+    let longitude: Double
+    let description: String?
     let location: String
     let status: String
     let type: String
     let typeIcon: String
-    
+
 }
