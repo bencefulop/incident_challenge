@@ -19,6 +19,7 @@ class IncidentsViewController: UIViewController {
     private func configureTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         view.addSubview(tableView)
+        tableView.register(IncidentCell.self, forCellReuseIdentifier: "incidentCell")
         tableView.backgroundColor = .systemBackground
         tableView.rowHeight = 60
         tableView.delegate = self
@@ -36,8 +37,9 @@ class IncidentsViewController: UIViewController {
 extension IncidentsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "tests"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "incidentCell", for: indexPath) as! IncidentCell
+        let current = incidents[indexPath.row]
+        cell.set(incident: current)
         return cell
     }
     
@@ -48,7 +50,13 @@ extension IncidentsViewController: UITableViewDataSource {
 }
 
 // - MARK: UITableViewDataSource
-extension IncidentsViewController: UITableViewDelegate { }
+extension IncidentsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+}
 
 
 
