@@ -9,11 +9,17 @@ class IncidentsViewController: UIViewController {
     var tableView: UITableView!
     let dataManager = DataManager.shared
     var incidents: [Incident] = []
+    let sortImage = UIImage(systemName: "arrow.up.arrow.down")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
         loadIncidents()
+        configureTableView()
+        configureNavigationBar()
+    }
+    
+    @objc func reverseSorting() {
+        print("🎉 reverseSorting")
     }
 
     private func configureTableView() {
@@ -26,11 +32,16 @@ class IncidentsViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let barButton = UIBarButtonItem(image: sortImage, style: .plain, target: self, action: #selector(reverseSorting))
+        navigationItem.rightBarButtonItem = barButton
+    }
+    
     private func loadIncidents() {
         dataManager.getSortedIncidents()
         incidents = dataManager.incidents
     }
-   
 }
 
 // - MARK: UITableViewDataSource
