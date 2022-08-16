@@ -32,6 +32,7 @@ class IncidentCell: UITableViewCell {
     
     private func configure() {
         addSubview(titleLabel)
+        self.accessoryType = .disclosureIndicator
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo:  self.topAnchor, constant: 12),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),

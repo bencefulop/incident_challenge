@@ -10,7 +10,8 @@ class IncidentsViewController: UIViewController {
     let dataManager = DataManager.shared
     var incidents: [Incident] = []
     let sortImage = UIImage(systemName: "arrow.up.arrow.down")
-
+    var reversed: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadIncidents()
@@ -18,10 +19,11 @@ class IncidentsViewController: UIViewController {
         configureNavigationBar()
     }
     
-    @objc func reverseSorting() {
-        print("🎉 reverseSorting")
+    private func loadIncidents() {
+        dataManager.getSortedIncidents()
+        incidents = dataManager.incidents
     }
-
+    
     private func configureTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         view.addSubview(tableView)
@@ -34,19 +36,29 @@ class IncidentsViewController: UIViewController {
     
     private func configureNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        let barButton = UIBarButtonItem(image: sortImage, style: .plain, target: self, action: #selector(reverseSorting))
+        let barButton = UIBarButtonItem(image: sortImage, style: .plain, target: self, action: #selector(reverseIncidentSorting))
         navigationItem.rightBarButtonItem = barButton
     }
     
-    private func loadIncidents() {
-        dataManager.getSortedIncidents()
-        incidents = dataManager.incidents
+    @objc func reverseIncidentSorting() {
+        incidents = incidents.sorted { (first: Incident, second: Incident) -> Bool in
+            let dateFormatter = DateFormatter.dateWithTimeZoneFormat
+            let firstDate = dateFormatter.date(from: first.lastUpdated)
+            let secondDate = dateFormatter.date(from: second.lastUpdated)
+            if reversed {
+                return firstDate?.compare(secondDate!) == .orderedDescending
+            } else {
+                return firstDate?.compare(secondDate!) == .orderedAscending
+            }
+        }
+        reversed.toggle()
+        tableView.reloadData()
     }
 }
 
 // - MARK: UITableViewDataSource
 extension IncidentsViewController: UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "incidentCell", for: indexPath) as! IncidentCell
         let current = incidents[indexPath.row]
