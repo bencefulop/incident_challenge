@@ -13,6 +13,7 @@
 		DD07E4B528AA3B8900866A68 /* IncidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */; };
 		DDB11A2928AB9DA300AFE89C /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB11A2828AB9DA300AFE89C /* DateFormatter+Extensions.swift */; };
 		DDB11A2B28ABA76D00AFE89C /* IncidentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB11A2A28ABA76D00AFE89C /* IncidentCell.swift */; };
+		DDB11A2F28AC468C00AFE89C /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB11A2E28AC468C00AFE89C /* IconView.swift */; };
 		DDDB964028AA44AE0010446B /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = DDDB963F28AA44AE0010446B /* TestData.json */; };
 		DDDB964528AA4BEA0010446B /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDB964428AA4BEA0010446B /* Incident.swift */; };
 		DDDB964928AA4E7B0010446B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDB964828AA4E7B0010446B /* DataManager.swift */; };
@@ -27,6 +28,7 @@
 		DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentsViewController.swift; sourceTree = "<group>"; };
 		DDB11A2828AB9DA300AFE89C /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		DDB11A2A28ABA76D00AFE89C /* IncidentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentCell.swift; sourceTree = "<group>"; };
+		DDB11A2E28AC468C00AFE89C /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		DDDB963F28AA44AE0010446B /* TestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
 		DDDB964428AA4BEA0010446B /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		DDDB964828AA4E7B0010446B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */,
 				DDB11A2A28ABA76D00AFE89C /* IncidentCell.swift */,
+				DDB11A2E28AC468C00AFE89C /* IconView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				DDB11A2928AB9DA300AFE89C /* DateFormatter+Extensions.swift in Sources */,
 				DD07E4A328AA382F00866A68 /* SceneDelegate.swift in Sources */,
 				DD07E4B528AA3B8900866A68 /* IncidentsViewController.swift in Sources */,
+				DDB11A2F28AC468C00AFE89C /* IconView.swift in Sources */,
 				DDDB964528AA4BEA0010446B /* Incident.swift in Sources */,
 				DDB11A2B28ABA76D00AFE89C /* IncidentCell.swift in Sources */,
 			);

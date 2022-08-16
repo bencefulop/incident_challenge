@@ -29,7 +29,7 @@ class IncidentsViewController: UIViewController {
         view.addSubview(tableView)
         tableView.register(IncidentCell.self, forCellReuseIdentifier: "incidentCell")
         tableView.backgroundColor = .systemBackground
-        tableView.rowHeight = 60
+        tableView.rowHeight = 100
         tableView.delegate = self
         tableView.dataSource = self
     }

@@ -5,13 +5,13 @@
 //  Created by Bence Fulop on 15/8/2022.
 //
 
-import Foundation
+import UIKit
 
 class DataManager {
     
     static let shared = DataManager()
-    
     var incidents = [Incident]()
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
