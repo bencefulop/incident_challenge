@@ -8,11 +8,16 @@
 import Foundation
 
 class DataManager {
-    private var stubEndpoint = "https://run.mocky.io/v3/5e90b420-388e-4913-b240-b5326823212c"
+    
+    static let shared = DataManager()
     
     var incidents = [Incident]()
     
-    init() {
+    private init() {}
+    
+    private var stubEndpoint = "https://run.mocky.io/v3/5e90b420-388e-4913-b240-b5326823212c"
+    
+    func getSortedIncidents() {
         
         if let url = URL(string: stubEndpoint) {
             if let data = try? Data(contentsOf: url) {
@@ -35,6 +40,7 @@ class DataManager {
                         )
                         self.incidents.append(newIncident)
                     }
+                    self.incidents = self.sortIncidentsByLastUpdated()
                 }
                 catch {
                     print("error trying parse json: \(error)")
@@ -42,5 +48,14 @@ class DataManager {
             }
         }
     }
-}
     
+    
+    private func sortIncidentsByLastUpdated() -> [Incident] {
+        return self.incidents.sorted { (first: Incident, second: Incident) -> Bool in
+            let dateFormatter = DateFormatter.dateWithTimeZoneFormat
+            let firstDate = dateFormatter.date(from: first.lastUpdated)
+            let secondDate = dateFormatter.date(from: second.lastUpdated)
+            return firstDate?.compare(secondDate!) == .orderedDescending
+        }
+    }
+}

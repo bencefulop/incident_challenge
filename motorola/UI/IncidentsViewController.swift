@@ -11,7 +11,8 @@ class IncidentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        let values = DataManager().incidents
+        DataManager.shared.getSortedIncidents()
+        let values = DataManager.shared.incidents
         print("🎉 \(values)")
     }
 

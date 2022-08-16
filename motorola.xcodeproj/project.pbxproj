@@ -11,6 +11,7 @@
 		DD07E4A328AA382F00866A68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07E4A228AA382F00866A68 /* SceneDelegate.swift */; };
 		DD07E4AA28AA383100866A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD07E4A928AA383100866A68 /* Assets.xcassets */; };
 		DD07E4B528AA3B8900866A68 /* IncidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */; };
+		DDB11A2928AB9DA300AFE89C /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB11A2828AB9DA300AFE89C /* DateFormatter+Extensions.swift */; };
 		DDDB964028AA44AE0010446B /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = DDDB963F28AA44AE0010446B /* TestData.json */; };
 		DDDB964528AA4BEA0010446B /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDB964428AA4BEA0010446B /* Incident.swift */; };
 		DDDB964928AA4E7B0010446B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDB964828AA4E7B0010446B /* DataManager.swift */; };
@@ -23,6 +24,7 @@
 		DD07E4A928AA383100866A68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD07E4AE28AA383100866A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD07E4B428AA3B8900866A68 /* IncidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentsViewController.swift; sourceTree = "<group>"; };
+		DDB11A2828AB9DA300AFE89C /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		DDDB963F28AA44AE0010446B /* TestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
 		DDDB964428AA4BEA0010446B /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		DDDB964828AA4E7B0010446B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -63,9 +65,18 @@
 				DDDB964128AA49F30010446B /* UI */,
 				DDDB964328AA4BD40010446B /* Models */,
 				DDDB964728AA4E630010446B /* Data */,
+				DDB11A2728AB9D8D00AFE89C /* Extensions */,
 				DDDB964228AA49FD0010446B /* SupportingFiles */,
 			);
 			path = motorola;
+			sourceTree = "<group>";
+		};
+		DDB11A2728AB9D8D00AFE89C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDB11A2828AB9DA300AFE89C /* DateFormatter+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DDDB964128AA49F30010446B /* UI */ = {
@@ -174,6 +185,7 @@
 			files = (
 				DD07E4A128AA382F00866A68 /* AppDelegate.swift in Sources */,
 				DDDB964928AA4E7B0010446B /* DataManager.swift in Sources */,
+				DDB11A2928AB9DA300AFE89C /* DateFormatter+Extensions.swift in Sources */,
 				DD07E4A328AA382F00866A68 /* SceneDelegate.swift in Sources */,
 				DD07E4B528AA3B8900866A68 /* IncidentsViewController.swift in Sources */,
 				DDDB964528AA4BEA0010446B /* Incident.swift in Sources */,
